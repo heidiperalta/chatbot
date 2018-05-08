@@ -1,0 +1,24 @@
+{
+  "name": "chatbots",
+  "version": "1.0.0",
+  "description": "Testing Dialogflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heidiperalta/chatbot.git"
+  },
+  "keywords": [
+    "chatbot",
+    "dialogflow",
+    "nodejs"
+  ],
+  "author": "Heidi Peralta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heidiperalta/chatbot/issues"
+  },
+  "homepage": "https://github.com/heidiperalta/chatbot#readme"
+}
