@@ -10,8 +10,13 @@ app.use(bodyParser.json());
 
 app.post('/webhook-test', (req, res) => {
     
-    let commandText = req.body.result && req.body.result.params && req.body.result.params.text;
-    let speech = commandText && commandText.split(' ').reverse().join(' ') || 'I didn\'t quite get that, come again?';
+    let commandText = req.body.queryResult 
+        && req.body.queryResult.params 
+        && req.body.queryResult.params.text;
+
+    let speech = commandText 
+        && commandText.split(' ').reverse().join(' ') 
+        || 'I didn\'t quite get that, come again?';
 
     return res.json({
         speech: speech,
