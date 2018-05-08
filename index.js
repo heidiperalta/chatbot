@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 app.post('/webhook-test', (req, res) => {
     
     let commandText = req.body.queryResult 
-        && req.body.queryResult.params 
-        && req.body.queryResult.params.text;
+        && req.body.queryResult.parameters 
+        && req.body.queryResult.parameters.reverseThisText;
 
     let speech = commandText 
         && commandText.split(' ').reverse().join(' ') 
