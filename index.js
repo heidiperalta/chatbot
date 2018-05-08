@@ -2,7 +2,8 @@ const express = require('express');
 
 const app = express();
 
-app.get('/test', (req, res) => {
+app.post('/webhook-test', (req, res) => {
+    
     res.json({
         response: 'hello!'
     });
