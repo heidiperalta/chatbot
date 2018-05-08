@@ -9,6 +9,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/webhook-test', (req, res) => {
+
+    console.log(req.body);
     
     let commandText = req.body.queryResult 
         && req.body.queryResult.parameters 
@@ -20,6 +22,7 @@ app.post('/webhook-test', (req, res) => {
 
     return res.json({
         speech: speech,
+        fulfillmentText: 'Returning reversed text on fulfillment',
         displayText: 'Returning reversed text!',
         source: 'webhook test'
     });
