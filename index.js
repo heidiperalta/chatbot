@@ -1,11 +1,22 @@
+'use strict';
+
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.post('/webhook-test', (req, res) => {
     
-    res.json({
-        response: 'hello!'
+    let commandText = req.body.result && req.body.result.params && req.body.result.params.text;
+    let speech = commandText && commandText.split(' ').reverse().join(' ') || '';
+
+    return res.json({
+        speech: speech,
+        displayText: 'Returning reversed text!',
+        source: 'webhook test'
     });
 });
 

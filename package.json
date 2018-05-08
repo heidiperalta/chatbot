@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/heidiperalta/chatbot#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.3"
   }
 }
