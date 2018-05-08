@@ -20,10 +20,8 @@ app.post('/webhook-test', (req, res) => {
         && commandText.split(' ').reverse().join(' ') 
         || 'I didn\'t quite get that, come again?';
 
-    console.log(speech);
-
     res.json({
-        fulfillmentText: 'Returning reversed text on fulfillment',
+        fulfillmentText: speech,
         source: 'webhook test'
     });
 });
