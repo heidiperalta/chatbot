@@ -22,7 +22,7 @@ app.post('/webhook-test', (req, res) => {
 
     console.log(speech);
 
-    return res.json({
+    res.json({
         fulfillmentText: 'Returning reversed text on fulfillment',
         source: 'webhook test'
     });
